@@ -37,7 +37,7 @@ def get_all_tweets(screen_name):
 
   with open('tweets/%s_tweets.csv' % screen_name, 'wb') as f:
     writer = csv.writer(f)
-    writer.writerow(['id','created_at','text'])
+    writer.writerow(['created_at','text'])
     writer.writerows(outtweets)
 
   print '---- Wrote %d tweets to user %s' % (len(all_tweets), screen_name)
