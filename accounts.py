@@ -1,4 +1,4 @@
-west_accounts = [
+all_accounts = [
 'CBCVancouver',
 'CBCKelowna',
 'CTVVancouver',
@@ -17,10 +17,7 @@ west_accounts = [
 'CBCSask',
 'CTVSaskatoon',
 'GlobalSaskatoon',
-'TheStarPhoenix'
-]
-
-east_accounts = [
+'TheStarPhoenix',
 'chronicleherald',
 'TwitCoast',
 'HalifaxNSNews',
@@ -31,10 +28,7 @@ east_accounts = [
 'CBCNL',
 'StJohnsNews',
 'DailyGleaner',
-'ChtownNews'
-]
-
-north_accounts = [
+'ChtownNews',
 'NunatsiaqNews',
 'CBCNunavut', 
 'CBCNorth',
@@ -42,26 +36,18 @@ north_accounts = [
 'cbcanewday',
 'CTVNorthernNews',
 'TimminsToday',
-]
-
-south_accounts = [
 'StCatStandard',
 'WR_Record',
 'OttawaCitizen',
 'northbaynugget',
 'TheTorontoSun',
 'themetrolondon',
-'meafordexpress'
-]
-
-national_accounts = [
+'meafordexpress',
 'CBCNews',
 'CTVNews',
 'globalnews',
 'HuffPostCanada',
 'CdnPress',
 'globeandmail',
-'nationalpost',
+'nationalpost'
 ]
-
-all_accounts = national_accounts + south_accounts + west_accounts + east_accounts + north_accounts
