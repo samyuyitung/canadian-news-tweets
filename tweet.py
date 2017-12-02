@@ -20,7 +20,8 @@ def get_all_tweets(screen_name):
     'screen_name': screen_name,
     'count': 200,
     'tweet_mode': 'extended', 
-    'include_rts': False
+    'include_rts': False,
+    'exclude_replies': True
   }
   new_tweets = api.user_timeline(**args)
   all_tweets.extend(new_tweets)
@@ -35,7 +36,7 @@ def get_all_tweets(screen_name):
     oldest = all_tweets[-1].id - 1
   outtweets = [[tweet.created_at.strftime('%Y-%m-%d'), tweet.full_text.encode('utf-8')] for tweet in all_tweets]
 
-  with open('tweets/%s_tweets.csv' % screen_name, 'wb') as f:
+  with open('%s_tweets.csv' % screen_name, 'wb') as f:
     writer = csv.writer(f)
     writer.writerow(['created_at','text'])
     writer.writerows(outtweets)
@@ -45,4 +46,4 @@ def get_all_tweets(screen_name):
 
 if __name__ == '__main__':
   pool = ThreadPool(cpu_count()) 
-  results = pool.map(get_all_tweets, all_accounts)
+  results = pool.map(get_all_tweets, ['samyuyitung'])
